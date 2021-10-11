@@ -1,15 +1,12 @@
 import {
   mdiAccountCircle,
   mdiDesktopMac,
-  mdiGithub,
   mdiLock,
   mdiAlertCircle,
-  mdiMonitorClean,
   mdiSquareEditOutline,
   mdiTable,
   mdiViewList,
-  mdiTelevisionGuide,
-  mdiResponsive
+  mdiTelevisionGuide
 } from '@mdi/js'
 
 export default [
@@ -40,11 +37,6 @@ export default [
       icon: mdiTelevisionGuide
     },
     {
-      to: '/responsive',
-      label: 'Responsive',
-      icon: mdiResponsive
-    },
-    {
       to: '/profile',
       label: 'Profile',
       icon: mdiAccountCircle
@@ -71,21 +63,6 @@ export default [
           label: 'Sub-item Two'
         }
       ]
-    }
-  ],
-  'About',
-  [
-    {
-      href: 'https://justboil.me/tailwind-admin-templates/vue-dashboard',
-      label: 'Premium version',
-      icon: mdiMonitorClean,
-      target: '_blank'
-    },
-    {
-      href: 'https://github.com/justboil/admin-one-vue-tailwind',
-      label: 'GitHub',
-      icon: mdiGithub,
-      target: '_blank'
     }
   ]
 ]

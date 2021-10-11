@@ -1,21 +1,7 @@
 <template>
   <title-bar :title-stack="titleStack" />
-  <hero-bar>Dashboard</hero-bar>
+  <div class="px-5 py-5 text-3xl">Dashboard</div>
   <main-section>
-    <notification color="info" :icon="mdiGithub">
-      Please star this project on
-      <a href="https://github.com/justboil/admin-one-vue-tailwind" class="underline" target="_blank">GitHub</a>
-      <template #right>
-        <jb-button
-          href="https://github.com/justboil/admin-one-vue-tailwind"
-          :icon="mdiGithub"
-          :outline="darkMode"
-          label="GitHub"
-          target="_blank"
-          small
-        />
-      </template>
-    </notification>
     <div class="grid grid-cols-1 gap-6 lg:grid-cols-3 mb-6">
       <card-widget
         trend="12%"
@@ -84,10 +70,6 @@
 
     <title-sub-bar :icon="mdiAccountMultiple" title="Clients"/>
 
-    <notification color="info" :icon="mdiMonitorCellphone">
-      <b>Responsive table.</b> Collapses on mobile
-    </notification>
-
     <card-component :icon="mdiMonitorCellphone" title="Responsive table" has-table>
       <clients-table />
     </card-component>
@@ -112,12 +94,9 @@ import * as chartConfig from '@/components/Charts/chart.config'
 import LineChart from '@/components/Charts/LineChart'
 import MainSection from '@/components/MainSection'
 import TitleBar from '@/components/TitleBar'
-import HeroBar from '@/components/HeroBar'
 import CardWidget from '@/components/CardWidget'
 import CardComponent from '@/components/CardComponent'
 import ClientsTable from '@/components/ClientsTable'
-import Notification from '@/components/Notification'
-import JbButton from '@/components/JbButton'
 import CardTransactionBar from '@/components/CardTransactionBar'
 import CardClientBar from '@/components/CardClientBar'
 import TitleSubBar from '@/components/TitleSubBar'
@@ -131,10 +110,7 @@ export default {
     LineChart,
     CardComponent,
     CardWidget,
-    HeroBar,
     TitleBar,
-    Notification,
-    JbButton,
     CardTransactionBar,
     CardClientBar
   },

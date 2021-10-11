@@ -20,7 +20,7 @@ router.beforeEach(to => {
 })
 
 /* Default title tag */
-const defaultDocumentTitle = 'Admin One Vue 3 Tailwind'
+const defaultDocumentTitle = 'Vue JS. Tailwind'
 
 router.afterEach(to => {
   /* Set document title from route meta */

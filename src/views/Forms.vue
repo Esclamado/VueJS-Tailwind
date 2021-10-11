@@ -1,6 +1,6 @@
 <template>
   <title-bar :title-stack="titleStack" />
-  <hero-bar>Forms</hero-bar>
+  <div class="px-5 py-5 text-3xl">Forms</div>
 
   <main-section>
     <title-sub-bar :icon="mdiBallotOutline" title="Forms example"/>
@@ -33,9 +33,9 @@
     </card-component>
   </main-section>
 
-  <titled-section>
+  <div class="px-5 text-2xl">
     Custom elements
-  </titled-section>
+  </div>
 
   <main-section>
     <card-component title="Custom elements" :icon="mdiBallotOutline">
@@ -76,7 +76,6 @@
     </card-component>
   </main-section>
 
-  <bottom-other-pages-section />
 </template>
 
 <script>
@@ -87,24 +86,19 @@ import TitleBar from '@/components/TitleBar'
 import CardComponent from '@/components/CardComponent'
 import CheckRadioPicker from '@/components/CheckRadioPicker'
 import FilePicker from '@/components/FilePicker'
-import HeroBar from '@/components/HeroBar'
 import Field from '@/components/Field'
 import Control from '@/components/Control'
 import Divider from '@/components/Divider.vue'
 import JbButton from '@/components/JbButton'
 import JbButtons from '@/components/JbButtons'
-import BottomOtherPagesSection from '@/components/BottomOtherPagesSection'
-import TitledSection from '@/components/TitledSection'
 import TitleSubBar from '@/components/TitleSubBar'
 
 export default {
   name: 'Forms',
   components: {
     TitleSubBar,
-    TitledSection,
     Divider,
     MainSection,
-    HeroBar,
     FilePicker,
     CheckRadioPicker,
     CardComponent,
@@ -112,8 +106,7 @@ export default {
     Field,
     Control,
     JbButton,
-    JbButtons,
-    BottomOtherPagesSection
+    JbButtons
   },
   setup () {
     const titleStack = ref(['Admin', 'Forms'])

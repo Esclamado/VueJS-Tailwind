@@ -82,7 +82,6 @@
     </div>
   </main-section>
 
-  <bottom-other-pages-section />
 </template>
 
 <script>
@@ -97,7 +96,6 @@ import Field from '@/components/Field'
 import Control from '@/components/Control'
 import FilePicker from '@/components/FilePicker'
 import JbButton from '@/components/JbButton'
-import BottomOtherPagesSection from '@/components/BottomOtherPagesSection'
 import JbButtons from '@/components/JbButtons'
 import UserCard from '@/components/UserCard'
 
@@ -113,8 +111,7 @@ export default {
     Field,
     Control,
     FilePicker,
-    JbButton,
-    BottomOtherPagesSection
+    JbButton
   },
   setup () {
     const store = useStore()

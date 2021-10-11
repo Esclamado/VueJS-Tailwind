@@ -1,20 +1,12 @@
 <template>
   <title-bar :title-stack="titleStack" />
-  <hero-bar>Tables</hero-bar>
+  <div class="px-5 py-3 text-3xl">Tables</div>
   <main-section>
-    <notification color="info" :icon="mdiMonitorCellphone">
-      <b>Responsive table.</b> Collapses on mobile
-    </notification>
-
     <card-component class="mb-6" title="Clients" :icon="mdiAccountMultiple" has-table>
       <clients-table checkable/>
     </card-component>
 
     <title-sub-bar :icon="mdiTableBorder" title="Wrapped variation"/>
-
-    <notification color="success" :icon="mdiTableBorder">
-      <b>Tightly wrapped</b> &mdash; table header becomes card header
-    </notification>
 
     <card-component class="mb-6" has-table>
       <clients-table checkable/>
@@ -25,11 +17,9 @@
     <notification color="danger" :icon="mdiTableOff">
       <b>Empty table.</b> When there's nothing to show
     </notification>
-
     <card-component empty/>
   </main-section>
 
-  <bottom-other-pages-section />
 </template>
 
 <script>
@@ -40,8 +30,6 @@ import Notification from '@/components/Notification'
 import ClientsTable from '@/components/ClientsTable'
 import CardComponent from '@/components/CardComponent'
 import TitleBar from '@/components/TitleBar'
-import HeroBar from '@/components/HeroBar'
-import BottomOtherPagesSection from '@/components/BottomOtherPagesSection'
 import TitleSubBar from '@/components/TitleSubBar'
 
 export default {
@@ -49,12 +37,10 @@ export default {
   components: {
     TitleSubBar,
     MainSection,
-    HeroBar,
     TitleBar,
     CardComponent,
     ClientsTable,
-    Notification,
-    BottomOtherPagesSection
+    Notification
   },
   setup () {
     const titleStack = ref(['Admin', 'Tables'])

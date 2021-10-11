@@ -27,19 +27,7 @@
 
   <title-bar :title-stack="titleStack" />
 
-  <hero-bar>UI Components</hero-bar>
-
-  <titled-section first>
-    Dark mode
-  </titled-section>
-
-  <main-section>
-    <card-component class="md:w-7/12 lg:w-5/12 xl:w-4/12 shadow-2xl md:mx-auto">
-      <div class="text-center py-24 lg:py-12 text-gray-500 dark:text-gray-400">
-        <jb-button label="Toggle" @click="darkModeToggle" outline />
-      </div>
-    </card-component>
-  </main-section>
+  <div class="px-5 py-3 text-3xl">UI Components</div>
 
   <titled-section>
     Modal examples
@@ -219,8 +207,6 @@
 
     <card-component empty/>
   </main-section>
-
-  <bottom-other-pages-section />
 </template>
 
 <script>
@@ -242,7 +228,6 @@ import {
   mdiClose
 } from '@mdi/js'
 import MainSection from '@/components/MainSection'
-import HeroBar from '@/components/HeroBar'
 import TitleBar from '@/components/TitleBar'
 import CardComponent from '@/components/CardComponent'
 import JbButtons from '@/components/JbButtons'
@@ -253,7 +238,6 @@ import ModalBox from '@/components/ModalBox'
 import TitledSection from '@/components/TitledSection'
 import Field from '@/components/Field'
 import CheckRadioPicker from '@/components/CheckRadioPicker'
-import BottomOtherPagesSection from '@/components/BottomOtherPagesSection'
 import TitleSubBar from '@/components/TitleSubBar'
 
 export default {
@@ -261,7 +245,6 @@ export default {
   components: {
     TitleSubBar,
     MainSection,
-    HeroBar,
     TitleBar,
     CardComponent,
     JbButtons,
@@ -271,8 +254,7 @@ export default {
     ModalBox,
     TitledSection,
     CheckRadioPicker,
-    Field,
-    BottomOtherPagesSection
+    Field
   },
   setup () {
     const titleStack = ref(['Admin', 'UI Components'])
